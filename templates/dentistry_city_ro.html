@@ -18,13 +18,41 @@
 <link rel="alternate" hreflang="en" href="{{EN_URL}}" />
 <link rel="alternate" hreflang="x-default" href="{{EN_URL}}" />
 
-<title>Clinici stomatologice în {{CITY_NAME}} (România) — Dataset</title>
+<title>{{CLINIC_COUNT}} Clinici stomatologice în {{CITY_NAME}} (România) — {{SNAPSHOT_DATE}} Dataset</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <meta name="description"
 content="Set de date structurat și pregătit pentru analiză despre clinici stomatologice din {{CITY_NAME}}, România. Snapshot {{SNAPSHOT_DATE}}. Include coordonate geografice și referință hartă. Format CSV și XLSX.">
-
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "{{CLINIC_COUNT}} Clinici stomatologice în {{CITY_NAME}} (România) — {{SNAPSHOT_DATE}} Dataset",
+  "description": "Set de date structurat despre clinici stomatologice din {{CITY_NAME}}, România. Snapshot {{SNAPSHOT_DATE}}.",
+  "inLanguage": "ro",
+  "creator": {
+    "@type": "Organization",
+    "name": "Local Data Insights"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Local Data Insights"
+  },
+  "spatialCoverage": {
+    "@type": "Place",
+    "name": "{{CITY_NAME}}, România"
+  },
+  "datePublished": "{{SNAPSHOT_DATE_ISO}}",
+  "keywords": [
+    "clinici stomatologice",
+    "{{CITY_NAME}}",
+    "România",
+    "date de piață",
+    "dataset"
+  ]
+}
+</script>
 </head>
 
 <body>
@@ -62,7 +90,9 @@ Actualizările sunt realizate periodic, în funcție de ciclul de procesare a da
 <p>
 Acest set LDI surprinde structura vizibilă a pieței serviciilor stomatologice din {{CITY_NAME}} la un moment specific în timp, pe baza surselor digitale publice disponibile.
 </p>
-
+<p>
+Datele sunt colectate din listări digitale publice vizibile și normalizate prin pipeline-ul de procesare LDI.
+</p>
 <p>
 Fiecare entitate este identificată, verificată și normalizată.
 Datasetul include coordonate geografice și o referință directă de hartă,
