@@ -31,21 +31,19 @@ content="Structured and analysis-ready dataset of dental clinics in {{CITY_NAME}
   "@context": "https://schema.org",
   "@type": "Dataset",
   "name": "{{CLINIC_COUNT}} Dental Clinics in {{CITY_NAME}} (Romania) — {{SNAPSHOT_DATE}} Dataset",
-  "description": "Structured dataset of dental clinics in {{CITY_NAME}}, Romania. Snapshot {{SNAPSHOT_DATE}}.",
+  "description": "Structured dataset of dental clinics in {{CITY_NAME}}, Romania. {{SNAPSHOT_DATE}} snapshot.",
   "inLanguage": "en",
   "creator": {
     "@type": "Organization",
     "name": "Local Data Insights"
   },
-"publisher": {
-  "@type": "Organization",
-  "name": "Local Data Insights"
-},
-
-"license": "https://localdatainsights-romd.github.io/license/",
-"isAccessibleForFree": false,
-
-"spatialCoverage": {
+  "publisher": {
+    "@type": "Organization",
+    "name": "Local Data Insights"
+  },
+  "license": "https://localdatainsights-romd.github.io/license/",
+  "isAccessibleForFree": false,
+  "spatialCoverage": {
     "@type": "Place",
     "name": "{{CITY_NAME}}, Romania"
   },
@@ -67,10 +65,10 @@ content="Structured and analysis-ready dataset of dental clinics in {{CITY_NAME}
 
 <p>
 <a href="{{RO_URL}}">
-Versiune în limba română
+Romanian version
 </a>
 </p>
-  
+
 <p>
 This page provides a structured and analysis-ready dataset of
 <strong>dental clinics in {{CITY_NAME}}, Romania</strong>.
@@ -96,9 +94,10 @@ Updates are performed periodically based on the data processing cycle.
 <p>
 This LDI dataset captures the visible structure of the dental services market in {{CITY_NAME}} at a specific point in time, based on publicly available digital sources.
 </p>
+
 <p>
 Data is collected from publicly visible digital business listings and normalized using the LDI processing pipeline.
-</p>  
+</p>
 
 <p>
 Each entity is identified, verified, and normalized.
