@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<link rel="icon" href="/favicon.png" type="image/png">      
+
+<!-- Google tag -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-78HQFLFDBY"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-78HQFLFDBY');
+</script>
+
+<link rel="canonical"
+href="https://localdatainsights-romd.github.io/ro/romania/dentistry/cluj/">
+
+<link rel="alternate" hreflang="ro"
+href="https://localdatainsights-romd.github.io/ro/romania/dentistry/cluj/" />
+<link rel="alternate" hreflang="en"
+href="https://localdatainsights-romd.github.io/en/romania/dentistry/cluj/" />
+<link rel="alternate" hreflang="x-default"
+href="https://localdatainsights-romd.github.io/en/romania/dentistry/cluj/" />
+
+<title>410 Clinici stomatologice în Cluj (România) — Ianuarie 2026 Dataset</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="description"
+content="Set de date structurat despre clinici stomatologice din Cluj, inclusiv Cluj-Napoca, Florești și Turda. Snapshot Ianuarie 2026. CSV și XLSX.">
+
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "Dataset",
+"name": "410 Clinici stomatologice în Cluj (România) — Ianuarie 2026 Dataset",
+"description": "Set de date despre clinici stomatologice din Cluj, inclusiv Cluj-Napoca și zonele urbane din apropiere.",
+"inLanguage": "ro",
+"creator": {
+"@type": "Organization",
+"name": "Local Data Insights"
+},
+"publisher": {
+"@type": "Organization",
+"name": "Local Data Insights"
+},
+"license": "https://localdatainsights-romd.github.io/license/",
+"isAccessibleForFree": false,
+"spatialCoverage": {
+"@type": "Place",
+"name": "Cluj, România"
+},
+"datePublished": "2026-01"
+}
+</script>
+</head>
+
+<body>
+
+<h1>Clinici stomatologice în Cluj (România)</h1>
+
+<p>
+<a href="https://localdatainsights-romd.github.io/en/romania/dentistry/cluj/">
+English version
+</a>
+</p>
+
+<p>
+Această pagină oferă un set de date structurat despre
+<strong>clinici stomatologice din Cluj</strong>.
+</p>
+
+<p>
+Datasetul include Cluj-Napoca și localitățile din jur,
+reflectând piața regională, nu doar un singur oraș.
+</p>
+
+<hr>
+
+<h2>Informații snapshot</h2>
+
+<p>
+Număr total de clinici: <strong>410</strong><br>
+Ultimul snapshot: <strong>Ianuarie 2026</strong>
+</p>
+
+<hr>
+
+<h2>Structura pieței în Cluj</h2>
+
+<ul>
+<li><strong>Cluj-Napoca:</strong> 341 clinici</li>
+<li><strong>Florești:</strong> 36 clinici</li>
+<li><strong>Turda:</strong> 25 clinici</li>
+<li><strong>Câmpia Turzii:</strong> 8 clinici</li>
+</ul>
+
+<p>
+Peste 80% dintre clinici sunt concentrate în Cluj-Napoca,
+iar localitățile din jur formează al doilea nivel al pieței.
+</p>
+
+<hr>
+
+<h2>Ce include datasetul</h2>
+
+<ul>
+<li>Nume business</li>
+<li>Adresă</li>
+<li>Coordonate geografice</li>
+<li>Link Google Maps</li>
+<li>Website</li>
+<li>Social media</li>
+<li>Categorie normalizată</li>
+<li>Status verificare</li>
+</ul>
+
+<hr>
+
+<h2>Utilizare</h2>
+
+<ul>
+<li>Analiză de piață</li>
+<li>Distribuție geografică</li>
+<li>Analiză competitivă</li>
+<li>Planificare strategică</li>
+</ul>
+
+<hr>
+
+<h2>Acces dataset</h2>
+
+<ul>
+<li>
+<a href="https://localdatainsights-store.lemonsqueezy.com/checkout/buy/d6099f1f-f3a4-4f3c-ac15-4c7867d40bc8"
+target="_blank" rel="noopener">
+Accesează dataset (sample disponibil)
+</a>
+</li>
+</ul>
+
+<hr>
+
+<p>
+<a href="https://localdatainsights-romd.github.io/">Înapoi la pagina principală</a>
+</p>
+
+</body>
+</html>
