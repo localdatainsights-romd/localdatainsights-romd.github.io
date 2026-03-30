@@ -2,9 +2,9 @@
 <html lang="ro">
 <head>
 <meta charset="utf-8">
-<link rel="icon" href="/favicon.png" type="image/png">      
+<link rel="icon" href="/favicon.png" type="image/png">
 
-<!-- Google tag (gtag.js) -->
+<!-- Google tag -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-78HQFLFDBY"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -13,29 +13,24 @@
   gtag('config', 'G-78HQFLFDBY');
 </script>
 
-<link rel="canonical"
-href="https://localdatainsights-romd.github.io/ro/romania/dentistry/[city]/">
+<link rel="canonical" href="{{RO_URL}}">
+<link rel="alternate" hreflang="ro" href="{{RO_URL}}" />
+<link rel="alternate" hreflang="en" href="{{EN_URL}}" />
+<link rel="alternate" hreflang="x-default" href="{{EN_URL}}" />
 
-<link rel="alternate" hreflang="ro"
-href="https://localdatainsights-romd.github.io/ro/romania/dentistry/[city]/" />
-<link rel="alternate" hreflang="en"
-href="https://localdatainsights-romd.github.io/en/romania/dentistry/[city]/" />
-<link rel="alternate" hreflang="x-default"
-href="https://localdatainsights-romd.github.io/en/romania/dentistry/[city]/" />
-
-<title>[COUNT] Clinici stomatologice în [CITY] (România) — Ianuarie 2026 Dataset</title>
+<title>{{CLINIC_COUNT}} Clinici stomatologice în {{CITY_NAME}} (România) — {{SNAPSHOT_DATE}} Dataset</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <meta name="description"
-content="Set de date structurat și pregătit pentru analiză despre clinici stomatologice din [CITY], România. Snapshot Ianuarie 2026. Include coordonate geografice și referință hartă. Format CSV și XLSX.">
+content="Dataset structurat despre clinici stomatologice din {{CITY_NAME}}, România. Include coordonate geografice, date de contact și prezență digitală observabilă. CSV și XLSX.">
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Dataset",
-  "name": "[COUNT] Clinici stomatologice în [CITY] (România) — Ianuarie 2026 Dataset",
-  "description": "Set de date structurat despre clinici stomatologice din [CITY], România. Snapshot Ianuarie 2026.",
+  "name": "{{CLINIC_COUNT}} Clinici stomatologice în {{CITY_NAME}} (România) — {{SNAPSHOT_DATE}} Dataset",
+  "description": "Dataset structurat despre clinici stomatologice din {{CITY_NAME}}, România.",
   "inLanguage": "ro",
   "creator": {
     "@type": "Organization",
@@ -49,16 +44,9 @@ content="Set de date structurat și pregătit pentru analiză despre clinici sto
   "isAccessibleForFree": false,
   "spatialCoverage": {
     "@type": "Place",
-    "name": "[CITY], România"
+    "name": "{{CITY_NAME}}, România"
   },
-  "datePublished": "2026-01",
-  "keywords": [
-    "clinici stomatologice",
-    "[CITY]",
-    "România",
-    "date de piață",
-    "dataset"
-  ]
+  "datePublished": "{{SNAPSHOT_DATE_ISO}}"
 }
 </script>
 
@@ -66,20 +54,23 @@ content="Set de date structurat și pregătit pentru analiză despre clinici sto
 
 <body>
 
-<h1>Clinici stomatologice în [CITY] (România)</h1>
+<h1>Clinici stomatologice în {{CITY_NAME}} (România)</h1>
 
 <p>
-<a href="https://localdatainsights-romd.github.io/en/romania/dentistry/[city]/">
-Versiune în limba engleză (English version)
+<a href="{{EN_URL}}">
+English version
 </a>
 </p>
 
 <p>
-Această pagină oferă un set de date structurat și pregătit pentru analiză despre
-<strong>clinici stomatologice din [CITY], România</strong>.
-În loc să colectezi manual informații dispersate,
-acest dataset oferă un snapshot normalizat și verificat
-al pieței stomatologice locale, într-un format coerent și utilizabil imediat.
+Această pagină oferă un dataset structurat despre
+<strong>clinici stomatologice din {{CITY_NAME}}, România</strong>,
+bazat pe surse digitale publice.
+</p>
+
+<p>
+Datasetul reflectă atât structura pieței,
+cât și prezența digitală observabilă a business-urilor.
 </p>
 
 <hr>
@@ -87,87 +78,87 @@ al pieței stomatologice locale, într-un format coerent și utilizabil imediat.
 <h2>Informații snapshot</h2>
 
 <p>
-Număr identificat de clinici: <strong>[COUNT]</strong><br>
-Ultimul snapshot complet: <strong>Ianuarie 2026</strong><br>
-Actualizările sunt realizate periodic, în funcție de ciclul de procesare a datelor.
+Număr identificat de clinici: <strong>{{CLINIC_COUNT}}</strong><br>
+Ultimul snapshot: <strong>{{SNAPSHOT_DATE}}</strong><br>
+Actualizările sunt realizate periodic.
 </p>
 
 <hr>
 
-<h2>Câte clinici stomatologice sunt în [CITY]?</h2>
+<h2>Câte clinici stomatologice sunt în {{CITY_NAME}}?</h2>
 
 <p>
-Acest set LDI surprinde structura vizibilă a pieței serviciilor stomatologice din [CITY] la un moment specific în timp, pe baza surselor digitale publice disponibile.
+Acest dataset surprinde structura vizibilă a pieței serviciilor stomatologice
+din {{CITY_NAME}} la un moment specific în timp.
 </p>
 
 <p>
-Datele sunt colectate din listări digitale publice vizibile și normalizate prin pipeline-ul de procesare LDI.
+Datele sunt colectate din surse digitale publice
+și normalizate prin pipeline-ul LDI.
 </p>
+
+<p>
+Numărul reflectă business-urile vizibile în ecosistemul digital public
+și nu reprezintă un registru oficial.
+</p>
+
+<hr>
+
+<h2>Cum sunt structurate datele</h2>
 
 <p>
 Fiecare entitate este identificată, verificată și normalizată.
-Datasetul include coordonate geografice și o referință directă de hartă,
-permițând validarea și analiza spațială fără cercetare suplimentară.
 </p>
 
 <p>
-Numărul nu reprezintă un registru oficial exhaustiv,
-ci o agregare structurată a operatorilor vizibili în ecosistemul digital public.
+Datasetul include coordonate geografice și referințe de hartă,
+permițând validarea și analiza spațială.
 </p>
 
 <hr>
 
-<h2>Ce include datasetul clinicilor stomatologice</h2>
+<h2>Ce include datasetul</h2>
 
 <ul>
   <li>Nume business</li>
   <li>Adresă fizică</li>
   <li>Coordonate geografice (latitudine, longitudine)</li>
-  <li>Link referință hartă</li>
-  <li>Website oficial (unde este disponibil)</li>
+  <li>Referință directă Google Maps</li>
+  <li>Website (unde este disponibil)</li>
+  <li>Date de contact (telefon, email unde este disponibil)</li>
   <li>Prezență social media (unde este disponibilă)</li>
   <li>Categorie normalizată</li>
-  <li>Status verificare</li>
 </ul>
 
 <hr>
 
-<h2>La ce poate fi utilizat acest set de date</h2>
+<h2>Indicatori de prezență digitală</h2>
 
-<ul>
-  <li>Analiză a pieței stomatologice din [CITY]</li>
-  <li>Estimarea numărului de clinici și distribuția lor geografică</li>
-  <li>Studii academice sau comerciale</li>
-  <li>Analiză competitivă locală</li>
-  <li>Planificare strategică pentru operatori din domeniul medical</li>
-  <li>Cercetare de piață pentru furnizori, investitori sau prestatori de servicii</li>
-</ul>
+<p>
+Acest dataset poate fi utilizat pentru a analiza
+prezența digitală observabilă a clinicilor stomatologice din {{CITY_NAME}},
+inclusiv existența website-urilor, canalelor de contact și social media.
+</p>
 
-<hr>
-
-<h2>De ce este valoros acest dataset</h2>
-
-<ul>
-  <li>Economisește ore de cercetare manuală</li>
-  <li>Pregătit pentru Excel, BI sau sisteme GIS</li>
-  <li>Oferă perspectivă spațială asupra pieței locale</li>
-  <li>Structurat pentru utilizare analitică imediată</li>
-</ul>
+<p>
+<a href="{{DIGITAL_PAGE_URL}}">
+Vezi indicatori de prezență digitală
+</a>
+</p>
 
 <hr>
 
 <h2>Acces la dataset complet</h2>
 
 <p>
-Versiunea completă a setului de date (format CSV + XLSX)
-este disponibilă prin magazinul oficial Local Data Insights.
+Setul complet de date (format CSV + XLSX)
+este disponibil prin magazinul oficial Local Data Insights.
 </p>
 
 <ul>
   <li>
-    <a href="[DATASET_LINK]"
-       target="_blank" rel="noopener">
-      Accesează dataset complet (CSV + XLSX)
+    <a href="{{LEMONSQUEEZY_LINK}}" target="_blank" rel="noopener">
+      Accesează dataset complet
     </a>
   </li>
 </ul>
@@ -177,44 +168,13 @@ este disponibilă prin magazinul oficial Local Data Insights.
 <h2>Despre proiect</h2>
 
 <p>
-Acest dataset face parte din proiectul independent
-<strong>Local Data Insights</strong>,
+Acest dataset face parte din proiectul Local Data Insights,
 axat pe date structurate despre piețele locale din România și Moldova.
 </p>
 
 <p>
 <a href="https://localdatainsights-romd.github.io/">
 Înapoi la pagina principală
-</a>
-</p>
-
-<hr>
-
-<h2>Actualizări proiect</h2>
-
-<p>
-Actualizările și anunțurile legate de proiect sunt publicate pe Telegram.
-</p>
-
-<ul>
-  <li>
-    <a href="https://t.me/localdatainsights" target="_blank" rel="noopener">
-      Local Data Insights pe Telegram
-    </a>
-  </li>
-</ul>
-
-<hr>
-
-<h2>Contact</h2>
-
-<p>
-Pentru date despre alte orașe sau industrii:
-</p>
-
-<p>
-📩 <a href="mailto:localdatainsights@gmail.com">
-localdatainsights@gmail.com
 </a>
 </p>
 
