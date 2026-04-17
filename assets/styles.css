@@ -37,6 +37,12 @@ h2 {
   margin-bottom: 12px;
 }
 
+h3 {
+  font-size: 17px;
+  margin-top: 20px;
+  margin-bottom: 8px;
+}
+
 p {
   margin: 10px 0;
 }
@@ -147,15 +153,313 @@ th {
 }
 
 /* -----------------------------
+   Product site layout
+   Use on new pages: <body class="product-page">
+----------------------------- */
+
+body.product-page {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 20px 40px;
+}
+
+/* Header / navigation */
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  padding: 22px 0;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 40px;
+}
+
+.logo {
+  font-weight: 700;
+  color: #1f2937;
+  text-decoration: none;
+  letter-spacing: -0.02em;
+}
+
+.logo:hover {
+  text-decoration: none;
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-size: 14px;
+}
+
+.site-nav a {
+  color: #374151;
+}
+
+.site-nav a:hover {
+  color: #1f4f8a;
+  text-decoration: none;
+}
+
+/* Hero */
+
+.hero {
+  padding: 56px 0 44px;
+  max-width: 860px;
+}
+
+.hero-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1f4f8a;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 12px;
+}
+
+.hero h1 {
+  font-size: 44px;
+  line-height: 1.12;
+  letter-spacing: -0.04em;
+  margin: 0 0 18px;
+  color: #111827;
+}
+
+.hero p {
+  font-size: 19px;
+  color: #4b5563;
+  max-width: 780px;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 26px;
+}
+
+/* Product buttons */
+
+.button {
+  display: inline-block;
+  padding: 11px 16px;
+  border-radius: 8px;
+  background: #1f4f8a;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.button:hover {
+  background: #183e6c;
+  text-decoration: none;
+}
+
+.button-secondary {
+  background: #f3f4f6;
+  color: #1f2937;
+}
+
+.button-secondary:hover {
+  background: #e5e7eb;
+  text-decoration: none;
+}
+
+/* Sections */
+
+.section {
+  padding: 36px 0;
+  border-top: 1px solid #eee;
+}
+
+.section h2 {
+  margin-top: 0;
+  font-size: 26px;
+  letter-spacing: -0.03em;
+  color: #111827;
+}
+
+.section-intro {
+  max-width: 760px;
+  color: #4b5563;
+  font-size: 16px;
+}
+
+/* Cards */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 22px;
+}
+
+.card {
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 20px;
+  background: #fff;
+}
+
+.card h3 {
+  margin: 0 0 8px;
+  font-size: 17px;
+  color: #111827;
+}
+
+.card p {
+  color: #4b5563;
+  font-size: 15px;
+}
+
+/* Dataset cards */
+
+.dataset-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 22px;
+}
+
+.dataset-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 20px;
+  background: #fafafa;
+}
+
+.dataset-card h3 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 18px;
+  color: #111827;
+}
+
+.dataset-card p {
+  color: #4b5563;
+  font-size: 15px;
+}
+
+.dataset-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 12px 0;
+}
+
+.badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: #eef2ff;
+  color: #1f4f8a;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.dataset-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 14px;
+  font-size: 14px;
+}
+
+/* Normal content lists for new pages */
+
+.content-list {
+  list-style: disc;
+  padding-left: 22px;
+  margin: 12px 0;
+}
+
+.content-list li {
+  margin-bottom: 8px;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+}
+
+/* Trust / note blocks */
+
+.note-box {
+  border-left: 4px solid #1f4f8a;
+  background: #f8fafc;
+  padding: 16px 18px;
+  margin-top: 18px;
+  border-radius: 8px;
+}
+
+.note-box p {
+  margin: 0;
+  color: #374151;
+}
+
+/* Footer */
+
+.site-footer {
+  border-top: 1px solid #eee;
+  margin-top: 48px;
+  padding-top: 24px;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.site-footer a {
+  color: #374151;
+}
+
+/* -----------------------------
    Mobile
 ----------------------------- */
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
+  body.product-page {
+    padding: 0 14px 32px;
+  }
 
+  .site-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 24px;
+  }
+
+  .site-nav {
+    gap: 10px 14px;
+  }
+
+  .hero {
+    padding: 36px 0 30px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    font-size: 17px;
+  }
+
+  .cards,
+  .dataset-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
   body {
     margin: 20px auto;
     padding: 0 12px;
     font-size: 16px;
+  }
+
+  body.product-page {
+    margin: 0 auto;
+    padding: 0 12px 32px;
   }
 
   h1 {
@@ -175,7 +479,8 @@ th {
     font-size: 13px;
   }
 
-  th, td {
+  th,
+  td {
     padding: 6px;
   }
 }
