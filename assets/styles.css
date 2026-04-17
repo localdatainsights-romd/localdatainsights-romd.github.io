@@ -176,6 +176,9 @@ body.product-page {
 }
 
 .logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   font-weight: 700;
   color: #1f2937;
   text-decoration: none;
@@ -184,6 +187,13 @@ body.product-page {
 
 .logo:hover {
   text-decoration: none;
+}
+
+.logo-icon {
+  width: 24px;
+  height: 24px;
+  display: block;
+  border-radius: 4px;
 }
 
 .site-nav {
@@ -484,3 +494,4 @@ body.product-page {
     padding: 6px;
   }
 }
+
