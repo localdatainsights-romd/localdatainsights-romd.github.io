@@ -183,6 +183,7 @@ body.product-page {
   color: #1f2937;
   text-decoration: none;
   letter-spacing: -0.02em;
+  white-space: nowrap;
 }
 
 .logo:hover {
@@ -194,6 +195,8 @@ body.product-page {
   height: 24px;
   display: block;
   border-radius: 4px;
+  object-fit: contain;
+  flex-shrink: 0;
 }
 
 .site-nav {
