@@ -14,12 +14,12 @@
 <meta charset="utf-8">
 <link rel="icon" href="/favicon.png" type="image/png">
 
-<title>Metodologie — Local Data Insights</title>
+<title>Metodologie și controlul calității — Local Data Insights</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <meta name="description"
-content="Metodologia Local Data Insights: cum sunt structurate datele despre piețele locale, ce înseamnă piață vizibilă, snapshot, indicatori digitali și limitări ale datelor.">
+content="Metodologia Local Data Insights: pipeline Bronze, Silver și Gold, curățare, geo-validare, verificarea prezenței digitale și controlul calității datelor despre piețele locale.">
 
 <link rel="canonical" href="https://localdatainsights-romd.github.io/ro/metodologie/">
 <link rel="alternate" hreflang="ro" href="https://localdatainsights-romd.github.io/ro/metodologie/">
@@ -51,17 +51,17 @@ content="Metodologia Local Data Insights: cum sunt structurate datele despre pie
 <section class="hero">
   <div class="hero-label">Metodologie</div>
 
-  <h1>Cum sunt construite datele LDI</h1>
+  <h1>Metodologie și controlul calității datelor</h1>
 
   <p>
-    Local Data Insights structurează informații digitale publice despre businessuri
-    locale pentru a crea seturi de date utile în analiză, explorare de piață,
-    prospectare și geoanaliză.
+    Local Data Insights nu publică simple liste brute. Datele trec printr-un
+    pipeline de curățare, normalizare, geo-validare și verificare a semnalelor
+    digitale înainte de a fi publicate ca dataset.
   </p>
 
   <p>
-    Scopul metodologiei este să explice ce reflectă datele, ce pot fi folosite
-    să arate și care sunt limitele lor.
+    Această pagină explică principiile metodologiei LDI, fără a expune regulile
+    interne detaliate, dicționarele complete sau logica tehnică proprietară.
   </p>
 
   <div class="hero-actions">
@@ -71,125 +71,215 @@ content="Metodologia Local Data Insights: cum sunt structurate datele despre pie
 </section>
 
 <section class="section">
-  <h2>Ce înseamnă „piață vizibilă”</h2>
+  <h2>Ce reflectă datele LDI</h2>
 
   <p class="section-intro">
-    Datele LDI reflectă partea unei piețe locale care este vizibilă în surse
-    digitale publice. Aceste date nu reprezintă un registru oficial și nu trebuie
-    interpretate ca o listă completă a tuturor businessurilor existente.
+    Datele LDI reflectă partea vizibilă digital a unei piețe locale, pe baza
+    informațiilor disponibile public la data snapshotului.
   </p>
 
   <div class="note-box">
     <p>
-      LDI oferă o vedere structurată asupra pieței vizibile digital: businessuri
-      identificate, locație, canale de contact, website-uri, social media și
-      indicatori observabili de prezență digitală.
+      Dataseturile LDI nu reprezintă registre oficiale și nu garantează acoperirea
+      completă a tuturor organizațiilor dintr-o piață. Ele oferă o vedere
+      structurată asupra businessurilor vizibile în surse digitale publice.
     </p>
   </div>
 </section>
 
 <section class="section">
-  <h2>Ce tipuri de informații pot fi incluse</h2>
+  <h2>Pipeline-ul de date: Bronze → Silver → Gold</h2>
 
   <p class="section-intro">
-    Structura exactă a unui dataset poate varia în funcție de verticală, oraș,
-    județ și disponibilitatea datelor.
+    Datele trec prin mai multe niveluri pentru a separa informațiile brute de
+    datele curate, verificabile și pregătite pentru analiză.
   </p>
 
   <div class="cards">
     <div class="card">
-      <h3>Identitate business</h3>
+      <h3>Bronze</h3>
       <p>
-        Nume business, categorie, verticală, oraș, județ și alte câmpuri de
-        clasificare disponibile.
+        Nivelul Bronze conține date brute observate în surse digitale publice.
+        În această etapă pot exista duplicate, categorii neclare, adrese incomplete
+        sau înregistrări care necesită verificare suplimentară.
       </p>
     </div>
 
     <div class="card">
-      <h3>Localizare</h3>
+      <h3>Silver</h3>
       <p>
-        Adresă, oraș, județ, coordonate geografice și referință către hartă,
-        acolo unde aceste date sunt disponibile.
+        În nivelul Silver, datele sunt curățate, normalizate și filtrate. Sunt
+        aplicate reguli de excludere, dicționare de categorii, verificări de
+        adresă, status, localizare și semnale digitale.
       </p>
     </div>
 
     <div class="card">
-      <h3>Prezență digitală</h3>
+      <h3>Gold</h3>
       <p>
-        Website, telefon, email, social media și alte canale publice observabile.
+        Nivelul Gold conține datele pregătite pentru publicare: înregistrări care
+        trec verificările de calitate, geo-validare și consistență a câmpurilor
+        principale.
       </p>
     </div>
   </div>
 </section>
 
 <section class="section">
-  <h2>Indicatori de prezență digitală</h2>
+  <h2>Curățare, categorii și eliminarea zgomotului</h2>
 
   <p class="section-intro">
-    Indicatorii digitali arată dacă un business are anumite elemente vizibile
-    online. Ei nu măsoară calitatea serviciilor, reputația sau performanța
-    comercială a businessului.
+    O parte importantă a metodologiei LDI este separarea businessurilor relevante
+    de înregistrările care nu aparțin verticalei analizate sau nu pot fi folosite
+    în mod fiabil.
   </p>
 
   <ul class="content-list">
-    <li>Disponibilitatea unui website.</li>
-    <li>Disponibilitatea unui număr de telefon.</li>
-    <li>Disponibilitatea unui email, unde este observabil.</li>
-    <li>Prezența unor profiluri social media, unde sunt detectate.</li>
-    <li>Completitudinea vizibilă a profilului digital.</li>
+    <li>Folosim dicționare de categorii pentru a identifica businessurile relevante pentru fiecare verticală.</li>
+    <li>Excludem categorii care nu aparțin pieței analizate.</li>
+    <li>Eliminăm înregistrări fără adresă utilizabilă, acolo unde localizarea este necesară pentru analiză.</li>
+    <li>Excludem businessurile marcate ca închise sau inactive în sursele observate.</li>
+    <li>Normalizăm câmpurile principale pentru comparații între orașe, județe și verticale.</li>
   </ul>
 </section>
 
 <section class="section">
-  <h2>Snapshot și actualizare</h2>
+  <h2>Geo-gate și validare spațială</h2>
 
   <p class="section-intro">
-    Fiecare dataset este legat de o dată de snapshot. Aceasta arată perioada în
-    care datele au fost colectate, structurate sau publicate.
+    Pentru ca datele să poată fi folosite în analiză locală și geoanaliză,
+    LDI aplică verificări geografice înainte de publicare.
   </p>
 
   <div class="cards">
     <div class="card">
-      <h3>Data snapshot-ului</h3>
+      <h3>Coordonate și localizare</h3>
       <p>
-        Ajută la separarea datelor curente de date istorice și evită confuzia
-        privind momentul observării pieței.
+        Folosim coordonate geografice atunci când sunt disponibile și verificabile
+        în contextul datasetului.
       </p>
     </div>
 
     <div class="card">
-      <h3>Schimbări în piață</h3>
+      <h3>Aria analizată</h3>
       <p>
-        Businessurile se pot închide, muta, schimba website-ul sau modifica
-        informațiile publice după data snapshot-ului.
+        Punctele care ies în afara geografiei analizate sunt verificate și pot fi
+        excluse dacă nu aparțin pieței locale definite.
       </p>
     </div>
 
     <div class="card">
-      <h3>Actualizări viitoare</h3>
+      <h3>Adrese utilizabile</h3>
       <p>
-        LDI poate publica versiuni actualizate ale seturilor de date, în funcție
-        de verticală, cerere și capacitatea de verificare.
+        Înregistrările fără localizare utilizabilă pot fi eliminate din
+        dataseturile unde analiza spațială este importantă.
       </p>
     </div>
   </div>
 </section>
 
 <section class="section">
-  <h2>Calitatea și structurarea datelor</h2>
+  <h2>Verificarea website-urilor și semnalelor digitale</h2>
 
   <p class="section-intro">
-    Datele sunt organizate pentru a fi mai ușor de analizat, filtrat și utilizat
-    în comparații locale.
+    LDI tratează website-urile și canalele sociale ca semnale ale prezenței
+    digitale observabile, nu doar ca simple câmpuri text.
   </p>
 
   <ul class="content-list">
-    <li>Normalizarea câmpurilor principale, unde este posibil.</li>
-    <li>Separarea informațiilor despre identitate, locație, contacte și prezență digitală.</li>
-    <li>Utilizarea unor câmpuri coerente pentru oraș, județ, verticală și categorie.</li>
-    <li>Marcarea câmpurilor lipsă sau indisponibile fără a le inventa.</li>
-    <li>Pregătirea datelor pentru lucru în CSV și XLSX.</li>
+    <li>Verificăm accesibilitatea website-urilor și eliminăm linkurile inactive sau eronate, acolo unde sunt detectate.</li>
+    <li>Separăm website-urile observabile de câmpurile lipsă sau neutilizabile.</li>
+    <li>Identificăm pagini publice de social media asociate businessurilor, atunci când sunt vizibile.</li>
+    <li>Pentru Facebook, Instagram sau LinkedIn, accentul este pe pagini publice asociate businessului, nu pe profiluri personale.</li>
+    <li>Semnalele digitale sunt publicate ca indicatori observabili, nu ca evaluare a calității businessului.</li>
   </ul>
+</section>
+
+<section class="section">
+  <h2>Verificări înainte de publicare</h2>
+
+  <p class="section-intro">
+    Înainte ca un dataset să fie publicat, sunt aplicate mai multe verificări
+    interne de calitate.
+  </p>
+
+  <div class="cards">
+    <div class="card">
+      <h3>Q1 — consistența câmpurilor</h3>
+      <p>
+        Verificăm dacă principalele câmpuri necesare pentru analiză sunt prezente
+        și coerente: nume, categorie, localizare, status și identificatori.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Q2 — calitatea localizării</h3>
+      <p>
+        Verificăm adresele, orașele, județele și coordonatele pentru a reduce
+        erorile geografice și punctele în afara ariei analizate.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Q3 — semnale digitale</h3>
+      <p>
+        Verificăm disponibilitatea website-urilor, contactelor și semnalelor
+        digitale observabile înainte de publicare.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Ce ajunge în datasetul publicat</h2>
+
+  <p class="section-intro">
+    Datasetul publicat nu include toate înregistrările observate inițial. În Gold
+    ajung doar datele care trec filtrele de relevanță, localizare și consistență.
+  </p>
+
+  <ul class="content-list">
+    <li>Businessuri relevante pentru verticala analizată.</li>
+    <li>Înregistrări cu localizare utilizabilă pentru piața definită.</li>
+    <li>Businessuri care nu sunt marcate ca închise în sursele observate.</li>
+    <li>Date de contact și canale digitale disponibile public, acolo unde acestea există.</li>
+    <li>Câmpuri normalizate pentru lucru în CSV și XLSX.</li>
+  </ul>
+</section>
+
+<section class="section">
+  <h2>Formate și utilizare</h2>
+
+  <p class="section-intro">
+    Dataseturile comerciale LDI sunt pregătite pentru utilizare în instrumente
+    de analiză, spreadsheet-uri și fluxuri de lucru operaționale.
+  </p>
+
+  <div class="cards">
+    <div class="card">
+      <h3>CSV</h3>
+      <p>
+        Format potrivit pentru import, analiză, automatizări și instrumente BI.
+        Fișierele sunt salvate în codificare UTF-8.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>XLSX</h3>
+      <p>
+        Format potrivit pentru lucru direct în Excel, inclusiv pentru câmpuri
+        unde zerourile inițiale trebuie păstrate.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Analiză locală</h3>
+      <p>
+        Câmpurile de localizare și coordonatele, atunci când sunt disponibile,
+        permit folosirea datelor pentru hărți și explorare spațială.
+      </p>
+    </div>
+  </div>
 </section>
 
 <section class="section">
@@ -226,45 +316,16 @@ content="Metodologia Local Data Insights: cum sunt structurate datele despre pie
 </section>
 
 <section class="section">
-  <h2>Limitări</h2>
+  <h2>Limitări și responsabilitate</h2>
 
   <div class="note-box">
     <p>
-      Datele pot conține lipsuri, diferențe de formatare sau informații care se
-      schimbă după data snapshot-ului. LDI urmărește să structureze piața vizibilă
-      într-un mod util pentru analiză, dar nu promite acoperire completă pentru
-      orice categorie, oraș sau județ.
+      Datele LDI reflectă informațiile disponibile în surse digitale publice la
+      data snapshotului. Ele nu reprezintă un registru oficial și nu garantează
+      acoperirea completă a tuturor organizațiilor dintr-o piață. Sursele publice
+      se pot modifica în timp, iar utilizarea datelor trebuie să respecte
+      legislația aplicabilă.
     </p>
-  </div>
-</section>
-
-<section class="section">
-  <h2>Cum pot fi folosite datele</h2>
-
-  <div class="cards">
-    <div class="card">
-      <h3>Analiză de piață locală</h3>
-      <p>
-        Pentru explorarea structurii vizibile a unei piețe locale pe orașe,
-        județe sau verticale.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>Prospectare și client discovery</h3>
-      <p>
-        Pentru identificarea segmentelor de business relevante pentru servicii
-        B2B, agenții digitale sau furnizori locali.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>Geoanaliză</h3>
-      <p>
-        Pentru hărți, comparații teritoriale și explorarea distribuției locale,
-        acolo unde datele de localizare sunt disponibile.
-      </p>
-    </div>
   </div>
 </section>
 
