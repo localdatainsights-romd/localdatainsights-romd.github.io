@@ -287,8 +287,13 @@ body.product-page {
 /* Sections */
 
 .section {
-  padding: 36px 0;
-  border-top: 1px solid #eee;
+  padding: 34px 0;
+  border-top: 1px solid #f1f1f1;
+}
+
+.hero + .section {
+  border-top: none;
+  padding-top: 24px;
 }
 
 .section h2 {
