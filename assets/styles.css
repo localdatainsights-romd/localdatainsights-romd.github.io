@@ -471,7 +471,8 @@ body.product-page {
 .footer-nav {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  align-items: center;
+  gap: 14px;
 }
 
 .footer-nav a {
@@ -490,11 +491,11 @@ body.product-page {
   gap: 6px;
 }
 
-.footer-social svg {
-  width: 16px;
-  height: 16px;
-  fill: currentColor;
-  flex-shrink: 0;
+.footer-social {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
 }
 
 /* -----------------------------
