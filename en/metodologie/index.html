@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-78HQFLFDBY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-78HQFLFDBY');
+</script>
+
+<meta charset="utf-8">
+<link rel="icon" href="/favicon.png" type="image/png">
+
+<title>Methodology and Data Quality Control — Local Data Insights</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="description"
+content="Local Data Insights methodology: Bronze, Silver, and Gold pipeline, data cleaning, geo-validation, digital presence verification, and quality control for local market datasets.">
+
+<link rel="canonical" href="https://localdatainsights-romd.github.io/en/methodology/">
+<link rel="alternate" hreflang="en" href="https://localdatainsights-romd.github.io/en/methodology/">
+<link rel="alternate" hreflang="ro" href="https://localdatainsights-romd.github.io/ro/metodologie/">
+<link rel="alternate" hreflang="x-default" href="https://localdatainsights-romd.github.io/en/methodology/">
+
+<link rel="stylesheet" href="/assets/styles.css">
+
+</head>
+
+<body class="product-page">
+
+<header class="site-header">
+  <a class="logo" href="/en/" aria-label="Local Data Insights">
+    <img src="/favicon.png" alt="" class="logo-icon">
+    <span>Local Data Insights</span>
+  </a>
+
+  <nav class="site-nav" aria-label="Main Navigation">
+    <a href="/en/datasets/">Datasets</a>
+    <a href="/en/samples/">Samples</a>
+    <a href="/en/methodology/">Methodology</a>
+    <a href="/en/custom-data/">Custom Data</a>
+    <a href="/en/contact/">Contact</a>
+    <a href="/ro/">RO</a>
+  </nav>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="hero-label">Methodology</div>
+
+  <h1>Methodology and Data Quality Control</h1>
+
+  <p>
+    Local Data Insights does not publish simple raw lists. The data undergoes a
+    cleaning, normalization, geo-validation, and digital signal verification pipeline
+    before being published as a dataset.
+  </p>
+
+  <p>
+    This page explains the principles of the LDI methodology, without exposing the detailed
+    internal rules, full dictionaries, or proprietary technical logic.
+  </p>
+
+  <div class="hero-actions">
+    <a class="button" href="/en/datasets/">View Datasets</a>
+    <a class="button button-secondary" href="/en/samples/">View Samples</a>
+  </div>
+</section>
+
+<section class="section">
+  <h2>What LDI Data Reflects</h2>
+
+  <p class="section-intro">
+    LDI data reflects the visible digital part of a local market, based on the
+    publicly available information at the time of the snapshot.
+  </p>
+
+  <div class="note-box">
+    <p>
+      LDI datasets are not official registries and do not guarantee full coverage
+      of all organizations in a market. They provide a structured view of businesses
+      visible in public digital sources.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <h2>ETL Process and Data Pipeline: Bronze → Silver → Gold</h2>
+
+  <p class="section-intro">
+    LDI uses an internal ETL process — data collection, transformation, and
+    controlled publishing — built on a Bronze → Silver → Gold architecture.
+    The data goes through multiple levels to separate raw information from clean,
+    verifiable data ready for analysis.
+  </p>
+
+  <div class="cards">
+    <div class="card">
+      <h3>Bronze</h3>
+      <p>
+        The Bronze level contains raw data observed in public digital sources.
+        At this stage, there may be duplicates, unclear categories, incomplete addresses,
+        or records that require further verification.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Silver</h3>
+      <p>
+        In the Silver level, the data is cleaned, normalized, and filtered. Exclusion rules,
+        category dictionaries, address checks, status, location, and digital signals are applied.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Gold</h3>
+      <p>
+        The Gold level contains data ready for publication: records that pass quality checks,
+        geo-validation, and consistency of the main fields.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Data Cleaning, Categories, and Noise Elimination</h2>
+
+  <p class="section-intro">
+    An important part of the LDI methodology is separating relevant businesses
+    from records that do not belong to the analyzed vertical or cannot be used reliably.
+  </p>
+
+  <ul class="content-list">
+    <li>We use category dictionaries to identify relevant businesses for each vertical.</li>
+    <li>We exclude categories that do not belong to the analyzed market.</li>
+    <li>We eliminate records without usable addresses, where localization is needed for analysis.</li>
+    <li>We exclude businesses marked as closed or inactive in the observed sources.</li>
+    <li>We normalize the main fields for comparisons between cities, counties, and verticals.</li>
+  </ul>
+</section>
+
+<section class="section">
+  <h2>Geo-gate and Spatial Validation</h2>
+
+  <p class="section-intro">
+    For the data to be used in local analysis and geo-analysis,
+    LDI applies geographic checks before publishing.
+  </p>
+
+  <div class="cards">
+    <div class="card">
+      <h3>Coordinates and Location</h3>
+      <p>
+        We use geographic coordinates when available and verifiable in the dataset context.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Analyzed Area</h3>
+      <p>
+        Points outside the analyzed geography are checked and can be excluded if they do not
+        belong to the defined local market.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Usable Addresses</h3>
+      <p>
+        Records without usable location can be eliminated from datasets where spatial analysis
+        is important.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Website and Digital Signal Verification</h2>
+
+  <p class="section-intro">
+    LDI treats websites and social media channels as observable digital signals, not just as simple text fields.
+  </p>
+
+  <ul class="content-list">
+    <li>We check website accessibility and eliminate inactive or erroneous links when detected.</li>
+    <li>We separate observable websites from missing or unusable fields.</li>
+    <li>We identify public social media pages associated with businesses, when visible.</li>
+    <li>For Facebook, Instagram, or LinkedIn, the focus is on public pages associated with the business, not personal profiles.</li>
+    <li>Digital signals are published as observable indicators, not as an assessment of business quality.</li>
+  </ul>
+</section>
+
+<section class="section">
+  <h2>Pre-publication Checks</h2>
+
+  <p class="section-intro">
+    Before a dataset is published, multiple internal quality checks are applied.
+  </p>
+
+  <div class="cards">
+    <div class="card">
+      <h3>Q1 — Field Consistency</h3>
+      <p>
+        We check whether the main fields required for analysis are present and consistent: name, category, location, status, and identifiers.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Q2 — Location Quality</h3>
+      <p>
+        We check addresses, cities, counties, and coordinates to reduce geographical errors and points outside the analyzed area.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Q3 — Digital Signals</h3>
+      <p>
+        We check website availability, contacts, and observable digital signals before publication.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>What Ends Up in the Published Dataset</h2>
+
+  <p class="section-intro">
+    The published dataset does not include all the records observed initially. In the Gold level,
+    only data that passes relevance, location, and consistency filters are included.
+  </p>
+
+  <ul class="content-list">
+    <li>Relevant businesses for the analyzed vertical.</li>
+    <li>Records with usable location for the defined market.</li>
+    <li>Businesses that are not marked as closed in the observed sources.</li>
+    <li>Public contact data and digital channels available, where they exist.</li>
+    <li>Normalized fields for working in CSV and XLSX formats.</li>
+  </ul>
+</section>
+
+<section class="section">
+  <h2>Formats and Usage</h2>
+
+  <p class="section-intro">
+    LDI commercial datasets are prepared for use in analysis tools, spreadsheets, and operational workflows.
+  </p>
+
+  <div class="cards">
+    <div class="card">
+      <h3>CSV</h3>
+      <p>
+        A format suitable for import, analysis, automation, and BI tools.
+        Files are saved in UTF-8 encoding.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>XLSX</h3>
+      <p>
+        A format suitable for direct work in Excel, including fields where leading zeros need to be preserved.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Local Analysis</h3>
+      <p>
+        The location fields and coordinates, when available, allow the data to be used for maps and spatial exploration.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>What LDI Is Not</h2>
+
+  <p class="section-intro">
+    For a correct interpretation, it is important to clarify what these datasets do not represent.
+  </p>
+
+  <div class="cards">
+    <div class="card">
+      <h3>Not an Official Registry</h3>
+      <p>
+        The data does not replace official company or institution registries.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Not a Quality Assessment</h3>
+      <p>
+        Digital indicators do not indicate whether a business is good, poor, or recommended.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Does Not Guarantee Full Coverage</h3>
+      <p>
+        The datasets reflect the visible market in public digital sources, not the absolute entirety of the market.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Limitations and Responsibility</h2>
+
+  <div class="note-box">
+    <p>
+      LDI data reflects information available in public digital sources at
+      the time of the snapshot. It is not an official registry and does not guarantee
+      full coverage of all organizations in a market. Public sources may change over time,
+      and the use of the data must comply with applicable legislation.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Explore the Data</h2>
+
+  <p class="section-intro">
+    Check out the published datasets, view samples, or request a custom dataset
+    for a vertical, city, or county that interests you.
+  </p>
+
+  <div class="hero-actions">
+    <a class="button" href="/en/datasets/">View Datasets</a>
+    <a class="button button-secondary" href="/en/samples/">View Samples</a>
+    <a class="button button-secondary" href="/en/custom-data/">Request Custom Data</a>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <p>
+    Local Data Insights — Structured Data About Local Markets in Romania and Moldova.
+  </p>
+
+  <p>
+    Contact:
+    <a href="mailto:localdatainsights@gmail.com">localdatainsights@gmail.com</a>
+  </p>
+
+  <p>
+    <a href="https://localdatainsights-store.lemonsqueezy.com/">Store</a>
+    ·
+    <a href="/license/">License</a>
+    ·
+    <a href="/en/">Main Page</a>
+    ·
+    <a href="/">Romanian version</a>
+  </p>
+</footer>
+
+</body>
+</html>
