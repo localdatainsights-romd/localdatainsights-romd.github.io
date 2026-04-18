@@ -489,15 +489,20 @@ body.product-page {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-}
-
-.footer-social {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
   font-size: 14px;
+  white-space: nowrap;
 }
 
+.footer-social svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+  flex-shrink: 0;
+}
+
+.footer-social span {
+  white-space: nowrap;
+}
 /* -----------------------------
    Mobile
 ----------------------------- */
