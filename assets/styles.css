@@ -503,6 +503,12 @@ body.product-page {
 .footer-social span {
   white-space: nowrap;
 }
+
+.footer-social,
+.footer-social span {
+  word-break: normal;
+  overflow-wrap: normal;
+}
 /* -----------------------------
    Mobile
 ----------------------------- */
