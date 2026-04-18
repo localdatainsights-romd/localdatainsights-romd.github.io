@@ -432,6 +432,35 @@ body.product-page {
 .site-footer a {
   color: #374151;
 }
+.footer-brand {
+  margin-bottom: 12px;
+}
+
+.footer-contact {
+  margin-bottom: 12px;
+}
+
+.footer-contact p {
+  margin-bottom: 4px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.footer-nav a {
+  color: #374151;
+  text-decoration: none;
+}
+
+.footer-nav a:hover {
+  color: #1f4f8a;
+  text-decoration: none;
+}
 
 /* -----------------------------
    Mobile
