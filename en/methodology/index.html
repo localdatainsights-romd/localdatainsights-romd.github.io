@@ -56,8 +56,8 @@ content="Local Data Insights methodology: Bronze, Silver, and Gold pipeline, dat
   <h1>Methodology and Data Quality Control</h1>
 
   <p>
-    Local Data Insights publishes only verified, high-quality datasets. Our data
-    undergoes thorough cleaning, normalization, geo-validation, and digital signal verification to ensure accuracy and usability.
+    Local Data Insights publishes datasets that are carefully processed and verified. 
+    Our data undergoes thorough cleaning, normalization, geo-validation, and digital signal verification to ensure its accuracy and reliability.
   </p>
 
   <p>
@@ -75,15 +75,14 @@ content="Local Data Insights methodology: Bronze, Silver, and Gold pipeline, dat
   <h2>What LDI Data Reflects</h2>
 
   <p class="section-intro">
-    LDI data reflects the visible digital part of a local market, based on the
-    publicly available information at the time of the snapshot.
+    LDI data provides a structured view of the visible digital landscape of a local market,
+    based on publicly available information at the time of the snapshot.
   </p>
 
   <div class="note-box">
     <p>
-      LDI datasets are not official registries and do not guarantee full coverage
-      of all organizations in a market. They provide a structured view of businesses
-      visible in public digital sources.
+      LDI datasets are based on publicly available digital sources and do not represent official
+      registries. While they offer a comprehensive view of businesses actively visible online, they may not cover all organizations in a market.
     </p>
   </div>
 </section>
@@ -92,35 +91,34 @@ content="Local Data Insights methodology: Bronze, Silver, and Gold pipeline, dat
   <h2>ETL Process and Data Pipeline: Bronze → Silver → Gold</h2>
 
   <p class="section-intro">
-    LDI uses an internal ETL process — data collection, transformation, and
-    controlled publishing — built on a Bronze → Silver → Gold architecture.
-    The data goes through multiple levels to separate raw information from clean,
-    verifiable data ready for analysis.
+    LDI uses an internal ETL (Extract, Transform, Load) process — data collection, transformation, and controlled publishing — built on a Bronze → Silver → Gold architecture. Each data stage involves refining raw information into clean, verifiable datasets that are ready for detailed analysis.
   </p>
 
   <div class="cards">
     <div class="card">
       <h3>Bronze</h3>
       <p>
-        The Bronze level contains raw data observed in public digital sources.
-        At this stage, there may be duplicates, unclear categories, incomplete addresses,
-        or records that require further verification.
+        The Bronze level contains raw data extracted from public digital sources. At this stage,
+        data may contain duplicates, ambiguous categories, incomplete addresses, or other inconsistencies
+        that require further processing to ensure accuracy and consistency.
       </p>
     </div>
 
     <div class="card">
       <h3>Silver</h3>
       <p>
-        In the Silver level, the data is cleaned, normalized, and filtered. Exclusion rules,
-        category dictionaries, address checks, status, location, and digital signals are applied.
+        At the Silver level, data undergoes cleaning, normalization, and standardization. This includes
+        applying exclusion rules, refining category dictionaries, validating addresses, and verifying
+        the status and location of businesses. The goal is to prepare data for accurate analysis and reporting.
       </p>
     </div>
 
     <div class="card">
       <h3>Gold</h3>
       <p>
-        The Gold level contains data ready for publication: records that pass quality checks,
-        geo-validation, and consistency of the main fields.
+        The Gold level contains fully verified datasets, with all records passing strict quality checks,
+        geo-validation, and ensuring consistency in key fields. These datasets are ready for publication
+        and can be used for in-depth market analysis, decision-making, and reporting.
       </p>
     </div>
   </div>
