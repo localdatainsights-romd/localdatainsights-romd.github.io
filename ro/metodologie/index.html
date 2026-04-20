@@ -54,14 +54,14 @@ content="Metodologia Local Data Insights: pipeline Bronze, Silver și Gold, cur�
   <h1>Metodologie și controlul calității datelor</h1>
 
   <p>
-    Local Data Insights nu publică simple liste brute. Datele trec printr-un
-    pipeline de curățare, normalizare, geo-validare și verificare a semnalelor
-    digitale înainte de a fi publicate ca dataset.
+    Local Data Insights publică seturi de date care sunt procesate cu grijă și verificate. 
+    Datele trec printr-un proces de curățare, normalizare, geo-validare și verificare 
+    a semnalelor digitale pentru a asigura acuratețea și fiabilitatea acestora.
   </p>
 
   <p>
-    Această pagină explică principiile metodologiei LDI, fără a expune regulile
-    interne detaliate, dicționarele complete sau logica tehnică proprietară.
+    Această pagină oferă o descriere generală a metodologiei LDI, explicând procesul 
+    de verificare a datelor, fără a detalia regulile interne, dicționarele complete sau logica tehnică proprietară.
   </p>
 
   <div class="hero-actions">
@@ -74,15 +74,13 @@ content="Metodologia Local Data Insights: pipeline Bronze, Silver și Gold, cur�
   <h2>Ce reflectă datele LDI</h2>
 
   <p class="section-intro">
-    Datele LDI reflectă partea vizibilă digital a unei piețe locale, pe baza
-    informațiilor disponibile public la data snapshotului.
+    Datele LDI oferă o viziune structurată asupra pieței locale, bazată pe informațiile publice disponibile la data snapshotului.
   </p>
 
   <div class="note-box">
     <p>
-      Dataseturile LDI nu reprezintă registre oficiale și nu garantează acoperirea
-      completă a tuturor organizațiilor dintr-o piață. Ele oferă o vedere
-      structurată asupra businessurilor vizibile în surse digitale publice.
+      Dataseturile LDI sunt bazate pe surse digitale publice și nu reprezintă registre oficiale.
+      Ele oferă o vedere completă asupra businessurilor vizibile online, dar nu acoperă toate organizațiile dintr-o piață.
     </p>
   </div>
 </section>
@@ -91,37 +89,36 @@ content="Metodologia Local Data Insights: pipeline Bronze, Silver și Gold, cur�
   <h2>Proces ETL și pipeline de date: Bronze → Silver → Gold</h2>
 
   <p class="section-intro">
-    LDI folosește un proces intern de tip ETL — colectare, transformare și
-    publicare controlată a datelor — construit pe o arhitectură Bronze → Silver → Gold.
-    Datele trec prin mai multe niveluri pentru a separa informațiile brute de
-    datele curate, verificabile și pregătite pentru analiză.
+    LDI folosește un proces intern de tip ETL (Extract, Transform, Load) — colectare,
+    transformare și publicare controlată a datelor — construit pe o arhitectură Bronze → Silver → Gold.
+    Fiecare nivel îmbunătățește calitatea datelor, asigurându-se că sunt corecte și utile pentru analiză.
   </p>
 
   <div class="cards">
     <div class="card">
       <h3>Bronze</h3>
       <p>
-        Nivelul Bronze conține date brute observate în surse digitale publice.
-        În această etapă pot exista duplicate, categorii neclare, adrese incomplete
-        sau înregistrări care necesită verificare suplimentară.
+        Nivelul Bronze conține date brute extrase din surse digitale publice. La acest nivel,
+        datele pot include duplicate, categorii neclare, adrese incomplete sau înregistrări care
+        necesită o verificare suplimentară pentru a fi corecte și coerente.
       </p>
     </div>
 
     <div class="card">
       <h3>Silver</h3>
       <p>
-        În nivelul Silver, datele sunt curățate, normalizate și filtrate. Sunt
-        aplicate reguli de excludere, dicționare de categorii, verificări de
-        adresă, status, localizare și semnale digitale.
+        În nivelul Silver, datele sunt curățate, normalizate și verificate pentru acuratețe.
+        Sunt aplicate reguli de excludere, verificări ale categoriilor, adrese și semnale digitale
+        pentru a asigura coerența și relevanța datelor.
       </p>
     </div>
 
     <div class="card">
       <h3>Gold</h3>
       <p>
-        Nivelul Gold conține datele pregătite pentru publicare: înregistrări care
-        trec verificările de calitate, geo-validare și consistență a câmpurilor
-        principale.
+        Nivelul Gold conține datele verificate, gata de publicare. Aceste seturi de date au trecut
+        prin verificări stricte de calitate, inclusiv geo-validare și validarea coerenței câmpurilor
+        principale, și sunt pregătite pentru utilizare în analiza pieței și luarea deciziilor.
       </p>
     </div>
   </div>
