@@ -124,106 +124,34 @@ content="Metodologia Local Data Insights: pipeline Bronze, Silver și Gold, cur�
   </div>
 </section>
 
-<section class="section">
-  <h2>Curățare, categorii și eliminarea zgomotului</h2>
-
-  <p class="section-intro">
-    O parte importantă a metodologiei LDI este separarea businessurilor relevante
-    de înregistrările care nu aparțin verticalei analizate sau nu pot fi folosite
-    în mod fiabil.
-  </p>
-
-  <ul class="content-list">
-    <li>Folosim dicționare de categorii pentru a identifica businessurile relevante pentru fiecare verticală.</li>
-    <li>Excludem categorii care nu aparțin pieței analizate.</li>
-    <li>Eliminăm înregistrări fără adresă utilizabilă, acolo unde localizarea este necesară pentru analiză.</li>
-    <li>Excludem businessurile marcate ca închise sau inactive în sursele observate.</li>
-    <li>Normalizăm câmpurile principale pentru comparații între orașe, județe și verticale.</li>
-  </ul>
-</section>
 
 <section class="section">
-  <h2>Geo-gate și validare spațială</h2>
+  <h2>Pre-publication Data Checks</h2>
 
   <p class="section-intro">
-    Pentru ca datele să poată fi folosite în analiză locală și geoanaliză,
-    LDI aplică verificări geografice înainte de publicare.
+    Before publishing any dataset, it goes through three essential levels of validation to ensure its technical accuracy, data quality, and readiness for analysis.
   </p>
 
   <div class="cards">
     <div class="card">
-      <h3>Coordonate și localizare</h3>
+      <h3>1st Level — Technical Check</h3>
       <p>
-        Folosim coordonate geografice atunci când sunt disponibile și verificabile
-        în contextul datasetului.
+        We check the dataset for technical issues, such as missing fields, errors in categorization, and data formatting problems that could affect the usability of the data.
       </p>
     </div>
 
     <div class="card">
-      <h3>Aria analizată</h3>
+      <h3>2nd Level — Quality Check</h3>
       <p>
-        Punctele care ies în afara geografiei analizate sunt verificate și pot fi
-        excluse dacă nu aparțin pieței locale definite.
+        At this stage, we validate the accuracy, completeness, and consistency of the data. We ensure that all key fields such as name, category, location, and contact details are reliable and correct.
       </p>
     </div>
 
     <div class="card">
-      <h3>Adrese utilizabile</h3>
+      <h3>3rd Level — Data Packaging</h3>
       <p>
-        Înregistrările fără localizare utilizabilă pot fi eliminate din
-        dataseturile unde analiza spațială este importantă.
-      </p>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <h2>Verificarea website-urilor și semnalelor digitale</h2>
-
-  <p class="section-intro">
-    LDI tratează website-urile și canalele sociale ca semnale ale prezenței
-    digitale observabile, nu doar ca simple câmpuri text.
-  </p>
-
-  <ul class="content-list">
-    <li>Verificăm accesibilitatea website-urilor și eliminăm linkurile inactive sau eronate, acolo unde sunt detectate.</li>
-    <li>Separăm website-urile observabile de câmpurile lipsă sau neutilizabile.</li>
-    <li>Identificăm pagini publice de social media asociate businessurilor, atunci când sunt vizibile.</li>
-    <li>Pentru Facebook, Instagram sau LinkedIn, accentul este pe pagini publice asociate businessului, nu pe profiluri personale.</li>
-    <li>Semnalele digitale sunt publicate ca indicatori observabili, nu ca evaluare a calității businessului.</li>
-  </ul>
-</section>
-
-<section class="section">
-  <h2>Verificări înainte de publicare</h2>
-
-  <p class="section-intro">
-    Înainte ca un dataset să fie publicat, sunt aplicate mai multe verificări
-    interne de calitate.
-  </p>
-
-  <div class="cards">
-    <div class="card">
-      <h3>Q1 — consistența câmpurilor</h3>
-      <p>
-        Verificăm dacă principalele câmpuri necesare pentru analiză sunt prezente
-        și coerente: nume, categorie, localizare, status și identificatori.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>Q2 — calitatea localizării</h3>
-      <p>
-        Verificăm adresele, orașele, județele și coordonatele pentru a reduce
-        erorile geografice și punctele în afara ariei analizate.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>Q3 — semnale digitale</h3>
-      <p>
-        Verificăm disponibilitatea website-urilor, contactelor și semnalelor
-        digitale observabile înainte de publicare.
+        In the final stage, we organize and format the data, ensuring it is well-structured
+        and ready for publication, making it easy to use in reports, analysis, and decision-making.
       </p>
     </div>
   </div>
@@ -233,138 +161,88 @@ content="Metodologia Local Data Insights: pipeline Bronze, Silver și Gold, cur�
   <h2>Ce ajunge în datasetul publicat</h2>
 
   <p class="section-intro">
-    Datasetul publicat nu include toate înregistrările observate inițial. În Gold
-    ajung doar datele care trec filtrele de relevanță, localizare și consistență.
+    Datasetul publicat include doar datele care trec printr-o serie de filtre pentru a asigura relevanța, acuratețea și fiabilitatea lor.
   </p>
 
   <ul class="content-list">
-    <li>Businessuri relevante pentru verticala analizată.</li>
-    <li>Înregistrări cu localizare utilizabilă pentru piața definită.</li>
-    <li>Businessuri care nu sunt marcate ca închise în sursele observate.</li>
-    <li>Date de contact și canale digitale disponibile public, acolo unde acestea există.</li>
-    <li>Câmpuri normalizate pentru lucru în CSV și XLSX.</li>
+    <li>Businessuri relevante pentru verticala analizată și piața definită.</li>
+    <li>Localizare corectă și utilizabilă pentru zona de piață definită.</li>
+    <li>Businessuri active (care nu sunt marcate ca închise în sursele observate).</li>
+    <li>Informații de contact publice și canale digitale accesibile.</li>
+    <li>Câmpuri normalizate pentru compatibilitate cu formatele CSV și XLSX.</li>
   </ul>
 </section>
 
 <section class="section">
-  <h2>Formate și utilizare</h2>
+  <h2>Ce nu reprezintă seturile de date LDI</h2>
 
   <p class="section-intro">
-    Dataseturile comerciale LDI sunt pregătite pentru utilizare în instrumente
-    de analiză, spreadsheet-uri și fluxuri de lucru operaționale.
-  </p>
-
-  <div class="cards">
-    <div class="card">
-      <h3>CSV</h3>
-      <p>
-        Format potrivit pentru import, analiză, automatizări și instrumente BI.
-        Fișierele sunt salvate în codificare UTF-8.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>XLSX</h3>
-      <p>
-        Format potrivit pentru lucru direct în Excel, inclusiv pentru câmpuri
-        unde zerourile inițiale trebuie păstrate.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>Analiză locală</h3>
-      <p>
-        Câmpurile de localizare și coordonatele, atunci când sunt disponibile,
-        permit folosirea datelor pentru hărți și explorare spațială.
-      </p>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <h2>Ce nu este LDI</h2>
-
-  <p class="section-intro">
-    Pentru o interpretare corectă, este important să fie clar ce nu reprezintă
-    aceste seturi de date.
+    Pentru o interpretare corectă, este important să clarificăm ce nu includ aceste seturi de date.
   </p>
 
   <div class="cards">
     <div class="card">
       <h3>Nu este registru oficial</h3>
       <p>
-        Datele nu înlocuiesc registrele oficiale ale companiilor sau instituțiilor.
+        Seturile de date nu înlocuiesc registrele oficiale ale companiilor sau instituțiilor.
       </p>
     </div>
 
     <div class="card">
-      <h3>Nu este evaluare de calitate</h3>
+      <h3>Nu reprezintă o evaluare a calității</h3>
       <p>
-        Indicatorii digitali nu spun dacă un business este bun, slab sau recomandat.
+        Indicatorii digitali nu oferă o evaluare a calității unui business, nu indică dacă acesta este bun, slab sau recomandat.
       </p>
     </div>
 
     <div class="card">
-      <h3>Nu garantează acoperire completă</h3>
+      <h3>Nu garantează o acoperire completă</h3>
       <p>
-        Seturile reflectă piața vizibilă în surse digitale publice, nu totalitatea
-        absolută a pieței.
+        Seturile reflectă doar piața vizibilă în sursele digitale publice, nu întreaga piață.
       </p>
     </div>
   </div>
 </section>
 
-<section class="section">
-  <h2>Limitări și responsabilitate</h2>
-
-  <div class="note-box">
-    <p>
-      Datele LDI reflectă informațiile disponibile în surse digitale publice la
-      data snapshotului. Ele nu reprezintă un registru oficial și nu garantează
-      acoperirea completă a tuturor organizațiilor dintr-o piață. Sursele publice
-      se pot modifica în timp, iar utilizarea datelor trebuie să respecte
-      legislația aplicabilă.
-    </p>
-  </div>
-</section>
 
 <section class="section">
   <h2>Explorați datele</h2>
 
   <p class="section-intro">
-    Consultați seturile publicate, vedeți mostrele sau solicitați un dataset
-    personalizat pentru o verticală, un oraș sau un județ care vă interesează.
+    Descoperiți seturile de date publicate, vizualizați mostrele sau solicitați un set de date personalizat
+    pentru verticala, orașul sau județul care vă interesează și care se potrivește nevoilor dumneavoastră.
   </p>
 
   <div class="hero-actions">
     <a class="button" href="/ro/datasets/">Vezi seturile de date</a>
     <a class="button button-secondary" href="/ro/mostre/">Vezi mostre</a>
-    <a class="button button-secondary" href="/ro/date-la-comanda/">Solicită date la comandă</a>
+    <a class="button button-secondary" href="/ro/date-la-comanda/">Solicită date personalizate</a>
   </div>
 </section>
 
 </main>
 
-<footer class="site-footer">
-  <p>
-    Local Data Insights — date structurate despre piețele locale din România și Moldova.
-  </p>
+<nav class="footer-nav" aria-label="Footer">
+  <a href="https://localdatainsights-store.lemonsqueezy.com/">Magazin</a>
+  <a href="/license/">Licență</a>
+  <a href="/ro/">Pagina principală</a>
+  <a href="/">English version</a>
 
-  <p>
-    Contact:
-    <a href="mailto:localdatainsights@gmail.com">localdatainsights@gmail.com</a>
-  </p>
+  <a href="https://www.linkedin.com/company/local-data-insights" class="footer-social">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M6.94 8.5H3.56V20h3.38V8.5ZM5.25 3A1.97 1.97 0 1 0 5.3 6.94 1.97 1.97 0 0 0 5.25 3ZM20 12.84c0-3.46-1.85-5.07-4.32-5.07-1.99 0-2.88 1.1-3.38 1.87V8.5H8.94V20h3.38v-6.42c0-1.69.32-3.32 2.42-3.32 2.06 0 2.1 1.93 2.1 3.43V20H20v-7.16Z"/>
+    </svg>
+    LinkedIn
+  </a>
 
-  <p>
-    <a href="https://localdatainsights-store.lemonsqueezy.com/">Magazin</a>
-    ·
-    <a href="/license/">Licență</a>
-    ·
-    <a href="/ro/">Pagina principală</a>
-    ·
-    <a href="/">English version</a>
-  </p>
-</footer>
+  <a href="https://t.me/localdatainsights" class="footer-social">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M21.94 4.66a1.5 1.5 0 0 0-1.63-.24L3.34 11.27a1.5 1.5 0 0 0 .16 2.83l4.1 1.36 1.5 4.77a1.5 1.5 0 0 0 2.7.42l2.3-3.27 4.42 3.27a1.5 1.5 0 0 0 2.38-.93l2.1-13.6a1.5 1.5 0 0 0-.06-.46ZM9.4 14.62l8.57-7.3-6.65 8.12-.5 2.78-1.42-3.6Z"/>
+    </svg>
+    Telegram
+  </a>
+</nav>
+
 
 </body>
 </html>
