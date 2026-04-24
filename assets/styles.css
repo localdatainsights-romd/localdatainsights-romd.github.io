@@ -222,7 +222,7 @@ body.product-page {
 /* Hero */
 
 .hero {
-  padding: 56px 0 44px;
+  padding: 56px 0 24px;
   max-width: 860px;
 }
 
@@ -293,7 +293,7 @@ body.product-page {
 
 .hero + .section {
   border-top: none;
-  padding-top: 24px;
+  padding-top: 8px;
 }
 
 .section h2 {
