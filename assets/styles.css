@@ -587,5 +587,37 @@ body.product-page {
   td {
     padding: 6px;
   }
+
+/* Мобильная версия навигации */
+@media (max-width: 800px) {
+  .site-header {
+    flex-direction: column; /* элементы header выстраиваются вертикально */
+    align-items: flex-start; /* выравнивание по левому краю */
+    gap: 14px; /* добавление отступа между элементами */
+    margin-bottom: 24px;
+  }
+
+  .site-nav {
+    display: flex;
+    flex-direction: column; /* элементы меню становятся вертикальными */
+    gap: 12px; /* добавление отступа между ссылками */
+  }
+
+  .site-nav a {
+    font-size: 16px; /* уменьшение шрифта для мобильных устройств */
+  }
+
+  .hero {
+    padding: 36px 0 30px; /* уменьшение отступов для геро-блока */
+  }
+
+  .hero h1 {
+    font-size: 32px; /* уменьшаем шрифт заголовка */
+  }
+
+  .hero p {
+    font-size: 17px; /* уменьшаем размер текста */
+  }
+}   
 }
 
