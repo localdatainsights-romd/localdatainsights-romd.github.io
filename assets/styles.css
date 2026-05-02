@@ -175,6 +175,16 @@ body.product-page {
   margin-bottom: 40px;
 }
 
+/* License page */
+.license-page .site-header {
+  border-bottom: none;
+  margin-bottom: 16px;
+}
+
+.license-page main .section:first-child {
+  border-top: none;
+}
+
 .logo {
   display: inline-flex;
   align-items: center;
