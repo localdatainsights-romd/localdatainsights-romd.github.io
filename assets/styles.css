@@ -185,6 +185,10 @@ body.product-page {
   border-top: none;
 }
 
+.license-page .site-footer {
+  margin-top: 96px;
+}
+
 .logo {
   display: inline-flex;
   align-items: center;
