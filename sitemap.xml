@@ -23,7 +23,7 @@
 
   <url>
     <loc>https://localdatainsights-romd.github.io/en/datasets/</loc>
-    <lastmod>2026-05-02</lastmod>
+    <lastmod>2026-05-09</lastmod>
   </url>
 
   <url>
@@ -43,7 +43,7 @@
 
   <url>
     <loc>https://localdatainsights-romd.github.io/ro/datasets/</loc>
-    <lastmod>2026-05-02</lastmod>
+    <lastmod>2026-05-09</lastmod>
   </url>
 
   <url>
@@ -321,4 +321,64 @@
     <lastmod>2026-05-02</lastmod>
   </url>
 
+   <url>
+    <loc>https://localdatainsights-romd.github.io/en/romania/dentistry/bihor/</loc>
+    <lastmod>2026-05-09</lastmod>
+  </url>
+
+  <url>
+    <loc>https://localdatainsights-romd.github.io/en/romania/dentistry/bihor/digital/</loc>
+    <lastmod>2026-05-09</lastmod>
+  </url>
+
+  <url>
+    <loc>https://localdatainsights-romd.github.io/en/romania/dentistry/bihor/list/</loc>
+    <lastmod>2026-05-09</lastmod>
+  </url>
+
+  <url>
+    <loc>https://localdatainsights-romd.github.io/ro/romania/dentistry/bihor/</loc>
+    <lastmod>2026-05-09</lastmod>
+  </url>
+
+  <url>
+    <loc>https://localdatainsights-romd.github.io/ro/romania/dentistry/bihor/digital/</loc>
+    <lastmod>2026-05-09</lastmod>
+  </url>
+
+  <url>
+    <loc>https://localdatainsights-romd.github.io/ro/romania/dentistry/bihor/list/</loc>
+    <lastmod>2026-05-09</lastmod>
+  </url>
+
+  <url>
+    <loc>https://localdatainsights-romd.github.io/en/romania/dentistry/prahova/</loc>
+    <lastmod>2026-05-09</lastmod>
+  </url>
+
+  <url>
+    <loc>https://localdatainsights-romd.github.io/en/romania/dentistry/prahova/digital/</loc>
+    <lastmod>2026-05-09</lastmod>
+  </url>
+
+  <url>
+    <loc>https://localdatainsights-romd.github.io/en/romania/dentistry/prahova/list/</loc>
+    <lastmod>2026-05-09</lastmod>
+  </url>
+
+  <url>
+    <loc>https://localdatainsights-romd.github.io/ro/romania/dentistry/prahova/</loc>
+    <lastmod>2026-05-09</lastmod>
+  </url>
+
+  <url>
+    <loc>https://localdatainsights-romd.github.io/ro/romania/dentistry/prahova/digital/</loc>
+    <lastmod>2026-05-09</lastmod>
+  </url>
+
+  <url>
+    <loc>https://localdatainsights-romd.github.io/ro/romania/dentistry/prahova/list/</loc>
+    <lastmod>2026-05-09</lastmod>
+  </url>
+  
 </urlset>
